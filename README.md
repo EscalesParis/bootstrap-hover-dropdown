@@ -1,9 +1,11 @@
-Bootstrap Hover Dropdown Plugin
+Bootstrap Hover Dropdown Plugin with every link clickable
 ===============================
 
 ![Current Version](http://img.shields.io/github/tag/cwspear/bootstrap-hover-dropdown.svg?style=flat)
 
 #### Name Change
+
+Personal fork of the original plugin.
 
 *Twitter Bootstrap* is now just *Bootstrap*, and I've renamed this repo, **renamed the files** and change all references from *Twitter Bootstrap* to just *Bootstrap* in the docs/example to reflect that.
 
@@ -48,6 +50,7 @@ Just like in Bootstrap you can activate it without any JavaScript, just by addin
 
 Add `data-hover="dropdown"` in addition (or in place of) Bootstrap's `data-toggle="dropdown"`.
 
+
 You can set options via data-attributes, too, via `data-delay` and `data-close-others`. Here's an example of markup:
 
 ```html
@@ -89,6 +92,7 @@ You can view a demo for this plugin on my site: http://cameronspear.com/demos/bo
 This plugin purposedly lets you choose a selector (as opposed to apply this to everything with the class of `.dropdown-toggle`). This is so that you can selectively apply it where you want. Maybe you only want to use it for the main nav, and not have it activate for dropdown buttons in the main content. You can add a class to the item that normally gets `.dropdown-toggle` and use that class with this plugin to easily achieve that, or use a selector such as `.main-nav .dropdown-toggle`.
 
 **Important:** Bootstrap relies on styles associated with the class `.dropdown-toggle` (for stuff like the caret color), and it is recommended you leave that class alone.
+**Important:** with this version of the plugin every link on your menu will be clickable.
 
 ## Changes/Bug Fixes
 

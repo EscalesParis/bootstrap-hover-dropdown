@@ -99,14 +99,14 @@
                 window.clearTimeout(timeout);
                 // restart hover timer
                 window.clearTimeout(timeoutHover);
-                
-                // delay for hover event.  
+
+                // delay for hover event.
                 timeoutHover = window.setTimeout(function () {
                     $allDropdowns.find(':focus').blur();
 
                     if(settings.instantlyCloseOthers === true)
                         $allDropdowns.removeClass('open');
-                    
+
                     // clear timer for hover event
                     window.clearTimeout(timeoutHover);
                     $this.attr('aria-expanded', 'true');
@@ -116,7 +116,14 @@
             }
         });
     };
-
+    $(document).ready(function () {
+        if($(window).width()>769){
+            // make every link on the dropdown menu clickable
+            $('.navbar .dropdown > a').click(function(){
+                location.href = this.href;
+            });
+        }
+    });
     $(document).ready(function () {
         // apply dropdownHover to all elements with the data-hover="dropdown" attribute
         $('[data-hover="dropdown"]').dropdownHover();
